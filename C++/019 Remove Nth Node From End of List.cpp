@@ -24,7 +24,10 @@ public:
         
         if(fast == NULL)
         {
-            return head->next;    
+            ListNode *tmp = head;
+            head = head->next;    
+            delete tmp;
+            return head;
         }
         
         ListNode *slow = head;
@@ -35,8 +38,9 @@ public:
             slow = slow->next;
         }
         
+        ListNode *tmp = slow->next;
         slow->next = slow->next->next;
-        
+        delete tmp;
         return head;
     }
 };
