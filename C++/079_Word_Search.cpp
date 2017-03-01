@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     bool exist(vector<vector<char> > &board, string word) {
@@ -35,3 +36,4 @@ public:
 		return ret;
 	}
 };
+

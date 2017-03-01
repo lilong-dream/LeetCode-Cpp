@@ -58,6 +58,7 @@ int main()
 	return 0;
 }
 
+
 class Solution {
 public:
     int search(int A[], int n, int target) {
@@ -81,3 +82,4 @@ public:
 		return -1;
     }
 };
+

@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     bool isVowel(char ch) {
@@ -34,3 +35,4 @@ public:
         return s;
     }
 };
+

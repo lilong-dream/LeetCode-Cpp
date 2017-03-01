@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,6 +7,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 class Solution {
 public:
     ListNode *rotateRight(ListNode *head, int k) {
@@ -37,3 +39,4 @@ public:
     	return head;
     }
 };
+

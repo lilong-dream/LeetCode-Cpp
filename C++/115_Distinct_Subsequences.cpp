@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int numDistinct(string S, string T) {
@@ -26,3 +27,4 @@ public:
         return f[m][n];
     }
 };
+

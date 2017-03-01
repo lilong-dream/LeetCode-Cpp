@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
@@ -13,6 +14,7 @@ public:
         return k + 1;
     }
 };
+
 
 class Solution {
 public:
@@ -34,3 +36,4 @@ public:
         return index + 1;
     }
 };
+

@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int singleNumber(int A[], int n) {
@@ -16,6 +17,7 @@ public:
         return one;
     }
 };
+
 
 class Solution {
 public:
@@ -50,3 +52,4 @@ public:
 		return res;
     }
 };
+

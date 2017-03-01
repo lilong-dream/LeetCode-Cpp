@@ -25,6 +25,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int uniquePaths(int m, int n) {
@@ -49,3 +50,4 @@ public:
     	return A[m - 1][n - 1];
     }
 };
+

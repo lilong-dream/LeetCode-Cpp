@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     string countAndSay(int n) {
@@ -40,3 +41,4 @@ public:
 		return s;
     }
 };
+

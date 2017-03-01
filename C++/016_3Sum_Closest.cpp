@@ -1,7 +1,8 @@
-ass Solution {
+
+class Solution {
 public:
     int threeSumClosest(vector<int> &num, int target) {
-        		if(num.size() < 3)
+       	if(num.size() < 3)
 		{
 			return 0;
 		}
@@ -10,6 +11,7 @@ public:
 
 		int min_gap = INT_MAX;
 		int res = INT_MAX;
+
 		for(int i = 0; i < num.size() - 2; ++i)
 		{
 			int j = i + 1;
@@ -41,3 +43,4 @@ public:
 		return res;
     }
 };
+

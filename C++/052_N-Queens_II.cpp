@@ -43,6 +43,7 @@ private:
     }
 };
 
+
 class Solution {
 public:
     int totalNQueens(int n) {
@@ -82,3 +83,4 @@ private:
 	vector<int> main_diag;
 	vector<int> anti_diag;
 };
+

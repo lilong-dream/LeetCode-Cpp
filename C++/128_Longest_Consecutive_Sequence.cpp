@@ -51,6 +51,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int longestConsecutive(vector<int> &num) {
@@ -126,3 +127,4 @@ public:
 		return max;
     }
 };
+

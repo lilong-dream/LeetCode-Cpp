@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int minPathSum(vector<vector<int> > &grid) {
@@ -28,3 +29,4 @@ public:
     	return paths[m - 1][n - 1];
     }
 };
+

@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
@@ -10,6 +11,7 @@ public:
         return j;
     }
 };
+
 
 class Solution {
 public:
@@ -25,3 +27,4 @@ public:
         return index;
     }
 };
+

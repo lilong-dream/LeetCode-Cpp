@@ -1,3 +1,4 @@
+
 /**
  * Definition for an interval.
  * struct Interval {
@@ -7,6 +8,7 @@
  *     Interval(int s, int e) : start(s), end(e) {}
  * };
  */
+
 class Solution {
 public:
 	bool cmp(Interval a, Interval b)
@@ -46,3 +48,4 @@ public:
 		return res;
     }
 };
+

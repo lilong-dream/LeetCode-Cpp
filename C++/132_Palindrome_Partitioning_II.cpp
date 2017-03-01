@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int minCut(string s) {
@@ -30,3 +31,4 @@ public:
 		return f[0];
     }
 };
+

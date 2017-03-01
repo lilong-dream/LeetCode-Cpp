@@ -25,6 +25,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     vector<int> twoSum(vector<int> &num, int target) {
@@ -44,3 +45,4 @@ public:
 		return result;
     }
 };
+

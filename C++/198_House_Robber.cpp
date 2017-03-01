@@ -1,3 +1,4 @@
+
 class Solution {
 public:
 
@@ -13,3 +14,4 @@ public:
         return vec[nums.size()];
     }
 };
+

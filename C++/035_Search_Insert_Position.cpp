@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int searchInsert(int A[], int n, int target) {
@@ -30,3 +31,4 @@ public:
     	return left;
     }
 };
+

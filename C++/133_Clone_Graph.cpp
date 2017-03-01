@@ -1,3 +1,4 @@
+
 /**
  * Definition for undirected graph.
  * struct UndirectedGraphNode {
@@ -6,6 +7,7 @@
  *     UndirectedGraphNode(int x) : label(x) {};
  * };
  */
+
 class Solution {
 public:
     UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
@@ -44,3 +46,4 @@ public:
 		return newNode;
     }
 };
+

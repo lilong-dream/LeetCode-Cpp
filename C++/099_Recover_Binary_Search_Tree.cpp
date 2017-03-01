@@ -1,3 +1,4 @@
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -7,6 +8,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     TreeNode *pre, *p1, *p2;
@@ -35,3 +37,4 @@ public:
 		std::swap(p1->val,p2->val);
     }
 };
+

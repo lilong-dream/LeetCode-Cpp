@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     bool isNumber(const char *s) {
@@ -65,6 +66,7 @@ public:
              return true;
     }
 };
+
 
 class Solution {
 public:
@@ -147,3 +149,4 @@ public:
 		}
     }
 };
+

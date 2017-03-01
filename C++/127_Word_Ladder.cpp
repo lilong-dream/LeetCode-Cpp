@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int ladderLength(string start, string end, unordered_set<string> &dict) {
@@ -41,6 +42,7 @@ public:
         return 0;
     }
 };
+
 
 class Solution {
 public:
@@ -190,3 +192,4 @@ public:
 		return 0;
     }
 };
+

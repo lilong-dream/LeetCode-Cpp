@@ -9,6 +9,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     bool isSameTree(TreeNode *p, TreeNode *q) {
@@ -25,3 +26,4 @@ public:
                                  && isSameTree(p->right, q->right);
     }
 };
+

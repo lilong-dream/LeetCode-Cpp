@@ -1,3 +1,4 @@
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -7,6 +8,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder) {
@@ -45,3 +47,4 @@ public:
 		return root;
     }
 };
+

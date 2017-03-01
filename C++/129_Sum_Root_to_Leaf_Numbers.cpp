@@ -9,6 +9,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     int sumNumbers(TreeNode *root) {
@@ -31,3 +32,4 @@ public:
                dfs(root->right, sum * 10 + root->val);
     }
 };
+

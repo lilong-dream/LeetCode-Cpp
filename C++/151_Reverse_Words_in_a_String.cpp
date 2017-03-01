@@ -49,6 +49,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     void reverseWords(string &s) {
@@ -181,3 +182,4 @@ public:
             return ltrim(rtrim(s));
     }
 };
+

@@ -32,6 +32,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int numDecodings(string s) {
@@ -68,3 +69,4 @@ public:
 		return a[s.length() - 1];
     }
 };
+

@@ -39,6 +39,7 @@ public:
     }
 };
 
+
 class Solution {
     public:
     double powx(double x, long n) {
@@ -78,3 +79,4 @@ int main()
 	double result = slt.pow(1, -2147483648);
 	cout << result << endl;
 } */
+

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
 using std::string;
 using std::vector;
 
@@ -46,6 +47,7 @@ int main()
 	return 0;
 }
 
+
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
@@ -70,3 +72,4 @@ public:
         }
     }
 };
+

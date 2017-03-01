@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,6 +7,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -15,6 +17,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     ListNode *node;
@@ -50,3 +53,4 @@ public:
 		return parent;
     }
 };
+

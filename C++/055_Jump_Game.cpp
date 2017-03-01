@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     bool canJump(int A[], int n) {
@@ -15,3 +16,4 @@ public:
       return f[n - 1] >= 0;
     }
 };
+

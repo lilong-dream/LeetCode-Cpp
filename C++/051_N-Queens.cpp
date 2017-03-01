@@ -47,6 +47,7 @@ private:
     }
 };
 
+
 class Solution {
 public:
     vector<vector<string> > solveNQueens(int n) {
@@ -103,3 +104,4 @@ private:
 	vector<int> main_diag;
 	vector<int> anti_diag;
 };
+

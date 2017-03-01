@@ -51,6 +51,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int myAtoi(string str) {
@@ -86,6 +87,7 @@ public:
             }
             i++;
         }
+
         return res * flag;
     }
 };
@@ -138,3 +140,4 @@ public:
 		return sign * res; 
     }
 };
+

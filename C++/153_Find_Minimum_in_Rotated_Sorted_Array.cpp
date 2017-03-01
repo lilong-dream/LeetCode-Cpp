@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int findMin(vector<int> &num) {
@@ -24,3 +25,4 @@ public:
         return num[i];
     }
 };
+

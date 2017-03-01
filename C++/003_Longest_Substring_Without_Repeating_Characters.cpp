@@ -1,3 +1,5 @@
+// Given a string, find the length of the longest substring without repeating characters.
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
@@ -26,11 +28,42 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        if(s.size() == 0){return 0;}
-		if(s.size() == 1){return 1;}
+        int n = s.length();
+        int i = 0, j = 0;
+        int maxLen = 0;
+        bool exist[256] = {false};
+        while (j < n) {
+            if (exist[s[j]]) {
+                maxLen = max(maxLen, j - i);
+                while (s[i] != s[j]) {
+                    exist[s[i]] = false;
+                    i++;
+                }
+                i++;
+                j++;
+            } else {
+                exist[s[j]] = true;
+                j++;
+            }
+        }
+        maxLen = max(maxLen, n - i);
+        return maxLen;
+    }
+};
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        if(s.size() == 0) {
+			return 0;
+		}
+		if(s.size() == 1) {
+			return 1;
+		}
 		int i = 0;
 		int j = 0;
 		int maxl = 0;
@@ -52,32 +85,6 @@ public:
 		}
 		
 		return maxl;
-    }
-};
-
-class Solution {
-public:
-    int lengthOfLongestSubstring(string s) {
-        int n = s.length();
-        int i = 0, j = 0;
-        int maxLen = 0;
-        bool exist[256] = { false };
-        while (j < n) {
-          if (exist[s[j]]) {
-            maxLen = max(maxLen, j-i);
-            while (s[i] != s[j]) {
-              exist[s[i]] = false;
-              i++;
-            }
-            i++;
-            j++;
-          } else {
-            exist[s[j]] = true;
-            j++;
-          }
-        }
-        maxLen = max(maxLen, n - i);
-        return maxLen;
     }
 };
 
@@ -139,3 +146,4 @@ public:
 		return longest;
     }
 };
+

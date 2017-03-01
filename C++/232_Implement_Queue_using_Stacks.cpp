@@ -1,3 +1,4 @@
+
 class Queue {
 public:
     // Push element x to the back of queue.
@@ -37,3 +38,4 @@ private:
     std::stack<int> st1;
     std::stack<int> st2;
 };
+

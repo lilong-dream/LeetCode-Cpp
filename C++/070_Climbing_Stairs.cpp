@@ -30,6 +30,7 @@ int main()
 	std::cout << result <<std::endl;
 } */
 
+
 class Solution {
 public:
     int climbStairs(int n) {
@@ -67,3 +68,4 @@ public:
         return pre1;
     }
 };
+

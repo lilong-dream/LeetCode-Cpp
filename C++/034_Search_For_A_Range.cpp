@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 class Solution {
@@ -63,3 +64,4 @@ int main()
 	vector<int> result = slt.searchRange(A, 5, 4);
 	std::cout << result[0] << " " << result[1] << std::endl;
 }
+

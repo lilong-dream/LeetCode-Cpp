@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,6 +7,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -24,6 +26,7 @@ public:
         return pre;
     }
 };
+
 
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -44,3 +47,4 @@ class Solution(object):
         newHead = self.reverseList(nxt)
         nxt.next = head
         return newHead
+

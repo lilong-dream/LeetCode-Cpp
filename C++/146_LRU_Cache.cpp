@@ -1,3 +1,4 @@
+
 struct Item
 {
   int key;
@@ -5,7 +6,7 @@ struct Item
   Item(int k, int val) : key(k), value(val) { }
 };
 
-class LRUCache{
+class LRUCache {
 public:
     LRUCache(int capacity) : m_capacity(capacity) {
         
@@ -52,7 +53,8 @@ private:
     unordered_map<int, list<Item>::iterator> cacheMap; 
 };
 
-class LRUCache{
+
+class LRUCache {
 public:
     struct CacheItem
 	{
@@ -108,3 +110,4 @@ private:
     	m_map[key] = m_cache.begin();
     }
 };
+

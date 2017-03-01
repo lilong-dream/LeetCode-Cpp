@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     bool isUgly(int num) {
@@ -19,3 +20,4 @@ public:
         return false;
     }
 };
+

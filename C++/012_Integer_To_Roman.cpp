@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+
 using std::string;
 
 class Solution {
@@ -40,3 +41,4 @@ int main()
 
 	return 0;
 }
+

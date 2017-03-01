@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,6 +7,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
@@ -27,6 +29,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     ListNode *deleteDuplicates(ListNode *head) {
@@ -43,14 +46,6 @@ public:
     }
 };
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
     ListNode *deleteDuplicates(ListNode *head) {
@@ -83,3 +78,4 @@ public:
     	return head;
     }
 };
+

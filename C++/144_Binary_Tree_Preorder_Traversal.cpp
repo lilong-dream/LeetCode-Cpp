@@ -9,6 +9,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode *root) {
@@ -62,3 +63,4 @@ public:
         return res;
     }
 };
+

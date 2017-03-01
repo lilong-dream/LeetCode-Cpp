@@ -30,6 +30,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     bool wordBreak(string s, unordered_set<string> &dict) {
@@ -52,3 +53,4 @@ public:
         return f[len];
     }
 };
+

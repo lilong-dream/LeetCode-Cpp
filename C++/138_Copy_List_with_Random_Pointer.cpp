@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list with a random pointer.
  * struct RandomListNode {
@@ -6,6 +7,7 @@
  *     RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
  * };
  */
+
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
@@ -49,3 +51,4 @@ public:
     	return newHead;
     }
 };
+

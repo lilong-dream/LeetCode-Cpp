@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int deal(int n) {
@@ -23,3 +24,4 @@ public:
         return true;
     }
 };
+

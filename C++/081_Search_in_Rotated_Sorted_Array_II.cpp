@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     bool search(int A[], int n, int target) {
@@ -46,3 +47,4 @@ public:
 		return false;
     }
 };
+

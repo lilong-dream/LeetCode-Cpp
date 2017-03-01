@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int numTrees(int n) {
@@ -14,3 +15,4 @@ public:
     	return num[n];
     }
 };
+

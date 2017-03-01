@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int trap(int A[], int n) {
@@ -42,3 +43,4 @@ public:
 		return res;
     }
 };
+

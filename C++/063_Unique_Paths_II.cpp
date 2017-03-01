@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {
@@ -51,6 +52,7 @@ public:
         return f[m - 1][n - 1];
     }
 };
+
 
 class Solution {
 public:
@@ -119,3 +121,4 @@ public:
     	return paths[m - 1][n - 1];
     }
 };
+

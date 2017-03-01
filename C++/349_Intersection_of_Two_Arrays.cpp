@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
@@ -16,6 +17,7 @@ public:
         return res;
     }
 };
+
 
 class Solution(object):
     def intersection(self, nums1, nums2):
@@ -49,3 +51,4 @@ func intersection(nums1 []int, nums2 []int) []int {
     }
     return res
 }
+

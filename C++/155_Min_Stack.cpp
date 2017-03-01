@@ -1,3 +1,4 @@
+
 class MinStack {
 public:
     void push(int x) {
@@ -29,3 +30,4 @@ private:
     stack<int> st1;
     stack<int> st2;
 };
+

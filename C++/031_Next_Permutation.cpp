@@ -1,4 +1,5 @@
-ass Solution {
+
+class Solution {
 public:
     void nextPermutation(vector<int> &num) {
         int len = num.size();
@@ -18,12 +19,12 @@ public:
 		}
 
 		int k = i;
-		for(int j = len - 1; j > i; --j) // from right to left 
+		for(int j = len - 1; j > i; --j)  // from right to left 
 		{
 			if(num[j] > num[i - 1])
 			{
 				k = j;
-				break; // !
+				break;  // !
 			}
 		}
 
@@ -44,3 +45,4 @@ public:
 		}
     }
 };
+

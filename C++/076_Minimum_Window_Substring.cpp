@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     string minWindow(string S, string T) {
@@ -45,3 +46,4 @@ public:
 		return count == tLen ? S.substr(minWindowBegin, windowLen) : "";
     }
 };
+

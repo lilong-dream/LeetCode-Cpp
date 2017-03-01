@@ -9,6 +9,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     bool isBalanced(TreeNode *root) {
@@ -38,6 +39,7 @@ public:
     }
 };
 
+
 class Solution {
     int abs(int x) {
         return x > 0 ? x : -x;
@@ -60,15 +62,6 @@ public:
     }
 };
 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
     int height(TreeNode* root) {
@@ -96,15 +89,6 @@ public:
     }
 };
 
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
     bool isBalanced(TreeNode *root) {
@@ -134,15 +118,6 @@ public:
     }
 };
 
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
     bool isBalanced(TreeNode *root) {
@@ -166,3 +141,4 @@ public:
 		return std::max(getHeight(root->left), getHeight(root->right)) + 1;
     }
 };
+

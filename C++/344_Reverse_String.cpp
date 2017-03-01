@@ -1,3 +1,4 @@
+
 class Solution {
 public:
 	string reverseString(string s) {
@@ -15,6 +16,7 @@ public:
 		return str;
 	}
 };
+
 
 func reverseString(s string) string {
 	chars := []rune(s) 
@@ -50,3 +52,4 @@ class Solution(object):
             res.append(s[j])
             j -= 1
         return ''.join(res)
+

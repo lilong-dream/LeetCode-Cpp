@@ -31,6 +31,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -53,3 +54,4 @@ public:
         return true;
     }
 };
+

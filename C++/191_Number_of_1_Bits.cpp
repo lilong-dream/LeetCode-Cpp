@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int hammingWeight(uint32_t n) {
@@ -16,6 +17,7 @@ public:
     }
 };
 
+
 class Solution(object):
     def hammingWeight(self, n):
         """
@@ -31,3 +33,4 @@ class Solution(object):
             if n == 0:
                 break
         return res
+

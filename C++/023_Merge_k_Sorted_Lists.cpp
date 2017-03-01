@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,7 +7,8 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-  struct compare{
+
+struct compare {
     bool operator() (ListNode* &left, ListNode* &right){
         return left->val > right->val;
     }
@@ -20,9 +22,10 @@ public:
         priority_queue<ListNode*, vector<ListNode *>, compare> heap;
         for(int i = 0; i < lists.size(); ++i){
             if(lists[i] != NULL){
-                heap.push(lists[i]);
+                heap.push(lists[i]);  // head of each list
             }
         }
+
         while(!heap.empty()){
             ListNode * current = heap.top(); 
             heap.pop();
@@ -42,3 +45,4 @@ public:
         return head;
     }
 };
+

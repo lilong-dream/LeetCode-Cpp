@@ -42,3 +42,4 @@ int main()
 	Solution slt;
 	std::cout << slt.isValidBST(&n1) << std::endl;
 }
+

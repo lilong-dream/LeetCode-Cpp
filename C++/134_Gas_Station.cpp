@@ -31,6 +31,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {
@@ -51,3 +52,4 @@ public:
         return total >= 0 ? j + 1 : -1;
     }
 };
+

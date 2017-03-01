@@ -1,3 +1,4 @@
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -7,6 +8,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     vector<vector<int> > pathSum(TreeNode *root, int sum) {
@@ -38,3 +40,4 @@ public:
         cur.pop_back();
     }
 };
+

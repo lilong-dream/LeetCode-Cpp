@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int getSum(int a, int b) {
@@ -10,6 +11,7 @@ public:
     }
 };
 
+
 func getSum(a int, b int) int {
         m := a
         n := b
@@ -21,3 +23,4 @@ func getSum(a int, b int) int {
 
         return m ^ n
 }
+

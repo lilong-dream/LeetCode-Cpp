@@ -52,6 +52,7 @@ int main()
 	std::cout << slt.hasPathSum(&n1, 21) << std::endl;
 }
 
+
 class Solution {
 public:
     bool hasPathSum(TreeNode *root, int sum) {
@@ -93,3 +94,4 @@ public:
         return false;
     }
 };
+

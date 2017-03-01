@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int maxProduct(int A[], int n) {
@@ -31,6 +32,7 @@ public:
     }
 };
 
+
 class Solution {
 public:
     int maxProduct(int A[], int n) {
@@ -49,3 +51,4 @@ public:
         return result;
     }
 };
+
