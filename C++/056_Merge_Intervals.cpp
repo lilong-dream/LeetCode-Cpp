@@ -11,33 +11,29 @@
 
 class Solution {
 public:
-	bool cmp(Interval a, Interval b)
-	{
+	bool cmp(Interval a, Interval b) {
 		return a.start < b.start;
 	}
 	
     vector<Interval> merge(vector<Interval> &intervals) {
-        if(intervals.size() < 2)
+        if(intervals.size() < 2) {
 			return intervals;
+		}
 		
 		std::sort(intervals.begin(), intervals.end(), [](Interval a, Interval b) {
-        return a.start < b.start;   
-    });
+        	return a.start < b.start;   
+    	});
 		
 		vector<Interval> res;
 		
 		Interval pre = intervals[0];
-		for(int i = 1; i < intervals.size(); ++i)
-		{
+		for(int i = 1; i < intervals.size(); ++i) {
 			Interval curr = intervals[i];
 			
-			if(pre.end >= curr.start)
-			{
+			if(pre.end >= curr.start) {
 				Interval merged(pre.start, std::max(pre.end, curr.end));
 				pre = merged;
-			}
-			else
-			{
+			} else {
 				res.push_back(pre);
 				pre = curr;
 			}

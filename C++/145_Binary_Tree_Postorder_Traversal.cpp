@@ -1,5 +1,8 @@
 // https://oj.leetcode.com/problems/binary-tree-postorder-traversal/
 
+// TODO
+// Hard
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -15,8 +18,7 @@ public:
     vector<int> postorderTraversal(TreeNode *root) {
         vector<int> res;
         
-        if(root == NULL)
-        {
+        if(root == NULL) {
             return res;
         }
         
@@ -42,25 +44,19 @@ public:
         
         std::stack<TreeNode*> st;
         
-        do
-        {
-            while(p != NULL)
-            {
+        do {
+            while(p != NULL) {
                 st.push(p);
                 p = p->left;
             }
             q = NULL;
-            while(!st.empty())
-            {
+            while(!st.empty()) {
                 p = st.top();
                 st.pop();
-                if(p->right == q)
-                {
+                if(p->right == q) {  //
                     res.push_back(p->val);
                     q = p;
-                }
-                else
-                {
+                } else {
                     st.push(p);
                     p = p -> right;
                     break;

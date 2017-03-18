@@ -7,11 +7,11 @@ public:
         while(j < nums.size()) {
             if(nums[j] != 0) {
                 nums[i] = nums[j];
-                if(i != j) {
+                if(i != j) {  //
                     nums[j] = 0;
                 }
                 i++;
-            }       
+            } 
             j++;
         }
     }

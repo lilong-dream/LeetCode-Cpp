@@ -44,26 +44,26 @@ public:
 class Solution {
 public:
     bool isSymmetric(TreeNode *root) {
-        if(root == NULL)
+        if(root == NULL) {
 			return true;
+		}
 		
 		std::queue<TreeNode*> q1;
 		std::queue<TreeNode*> q2;
 		q1.push(root->left);
 		q2.push(root->right);
 		
-		while(!q1.empty() && !q2.empty())
-		{
+		while(!q1.empty() && !q2.empty()) {
 			TreeNode *left = q1.front();
 			q1.pop();
 			TreeNode *right = q2.front();
 			q2.pop();
 			
-			if(left == NULL && right != NULL || left != NULL && right == NULL)
+			if(left == NULL && right != NULL || left != NULL && right == NULL) {
 				return false;
+			}
 			
-			if(left != NULL && right != NULL)
-			{
+			if(left != NULL && right != NULL) {
 				if(left->val != right->val)
 					return false;
 				

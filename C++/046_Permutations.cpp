@@ -14,10 +14,10 @@ public:
 		if(start == num.size())
 		{
 			res.push_back(num);
-			//return;
+			return;
 		}
 		
-		for(int i = start; i < num.size(); ++i) // not start + 1
+		for(int i = start; i < num.size(); ++i)  // not start + 1
 		{
 			std::swap(num[start], num[i]);
 			helper(num, start + 1, res);

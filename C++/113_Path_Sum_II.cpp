@@ -18,18 +18,15 @@ public:
         return res;
     }
     
-    void helper(TreeNode *root, int gap, vector<int> &cur, vector<vector<int> > &res)
-    {
-        if(root == NULL)
-        {
+    void helper(TreeNode *root, int gap, vector<int> &cur, vector<vector<int> > &res) {
+        if(root == NULL) {
             return;
         }
         
         cur.push_back(root->val);
         
-        if(root->left == NULL && root->right == NULL && root->val == gap)
-        {
-            res.push_back(cur);  // not return! should pop
+        if(root->left == NULL && root->right == NULL && root->val == gap) {
+             res.push_back(cur);  // not return! should pop
              cur.pop_back();
              return;
         }

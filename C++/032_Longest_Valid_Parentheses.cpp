@@ -1,5 +1,5 @@
 
-// hard
+// Hard
 
 class Solution {
 public:

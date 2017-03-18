@@ -11,14 +11,12 @@
 class Solution {
 public:
     ListNode *sortList(ListNode *head) {
-        if(head == NULL || head->next == NULL)
-        {
+        if(head == NULL || head->next == NULL) {
             return head;
         }
         ListNode *fast = head;
         ListNode *slow = head;
-        while(fast->next && fast->next->next)
-        {
+        while(fast->next && fast->next->next) {
             fast = fast->next->next;
             slow = slow->next;
         }
@@ -29,21 +27,16 @@ public:
         return merge(left, right);
     }
     
-    ListNode *merge(ListNode *left, ListNode *right)
-    {
+    ListNode *merge(ListNode *left, ListNode *right) {
         ListNode dummy(-1);
         ListNode *node = &dummy;
-        while(left || right)
-        {
+        while(left || right) {
             int lval = left ? left->val : INT_MAX;
             int rval = right ? right->val : INT_MAX;
-            if(lval < rval)
-            {
+            if(lval < rval) {
                 node->next = left;
                 left = left->next;
-            }
-            else
-            {
+            } else {
                 node->next = right;
                 right = right->next;
             }
@@ -147,7 +140,7 @@ public:
 			}
 		}
 
-		cur->next = NULL; // end with null
+		cur->next = NULL;  // end with null
 
 		return res;
     }

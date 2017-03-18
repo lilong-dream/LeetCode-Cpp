@@ -12,27 +12,47 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        if(head == NULL || head->next == NULL)
+        if(head == NULL || head->next == NULL) {
+            return false;
+        }
+        
+        ListNode* fast = head;
+        ListNode* slow = head;
+        
+        while(fast && fast->next)
         {
+            fast = fast->next->next;
+            slow = slow->next;
+            if(fast == slow) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+};
+
+
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        if(head == NULL || head->next == NULL) {
             return false;
         }
         
         ListNode *fast = head;
         ListNode *slow = head;
         
-        while(fast->next != NULL)
-        {
+        while(fast->next != NULL) {
             fast = fast->next->next;
             
-            if(fast == NULL)
-            {
+            if(fast == NULL) {
                 return false;
             }
             
             slow = slow->next;
             
-            if(fast == slow)
-            {
+            if(fast == slow) {
                 return true;
             }
         }
@@ -40,7 +60,6 @@ public:
         return false;
     }
 };
-
 
 class Solution {
 public:
@@ -57,30 +76,6 @@ public:
             }
             slow = slow->next;
             if(quick == slow) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-
-class Solution {
-public:
-    bool hasCycle(ListNode *head) {
-        if(head == NULL || head->next == NULL)
-        {
-            return false;
-        }
-        
-        ListNode* fast = head;
-        ListNode* slow = head;
-        
-        while(fast && fast->next)
-        {
-            fast = fast->next->next;
-            slow = slow->next;
-            if(fast == slow)
-            {
                 return true;
             }
         }

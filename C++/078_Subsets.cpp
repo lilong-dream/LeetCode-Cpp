@@ -7,12 +7,9 @@ public:
     	vector<vector<int> > result;
     	vector<int> tmp;
 
-    	for(int i = 0; i < 1 << len; i++)
-    	{
-    		for(int j = 0; j < len; j ++)
-    		{
-    			if(i & 1 << j)
-    			{
+    	for(int i = 0; i < 1 << len; i++) {
+    		for(int j = 0; j < len; j ++) {
+    			if(i & 1 << j) {
     				tmp.push_back(S[j]);
     			}
     		}

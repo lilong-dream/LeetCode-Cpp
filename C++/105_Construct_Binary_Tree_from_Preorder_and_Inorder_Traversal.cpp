@@ -1,4 +1,7 @@
 
+// TODO
+// Tree
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -12,8 +15,7 @@
 class Solution {
 public:
     TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
-        if(preorder.empty() || preorder.size() != inorder.size())
-        {
+        if(preorder.empty() || preorder.size() != inorder.size()) {
             return NULL;
         }
         
@@ -21,24 +23,18 @@ public:
     }
     
     TreeNode *buildTree(vector<int> &preorder, int preBegin, int preEnd, 
-                        vector<int> &inorder, int inBegin, int inEnd) 
-    {
-        if(preBegin > preEnd)
-        {
+                        vector<int> &inorder, int inBegin, int inEnd) {
+        if(preBegin > preEnd) {
             return NULL;            
         }
         
         TreeNode* root = new TreeNode(preorder[preBegin]);  // not 0
         
         int seperator = inBegin;  //
-        while(seperator <= inEnd)
-        {
-            if(inorder[seperator] == root->val)
-            {
+        while(seperator <= inEnd) {
+            if(inorder[seperator] == root->val) {
                 break;
-            }
-            else
-            {
+            } else {
                 ++seperator;
             }
         }
@@ -65,10 +61,8 @@ public:
     }
 
 	TreeNode *buildTree(vector<int> &preorder, int preStart, int preEnd, 
-						vector<int> &inorder, int inStart, int inEnd) 
-	{
-		if(preStart > preEnd || inStart > inEnd)
-		{
+						vector<int> &inorder, int inStart, int inEnd) {
+		if(preStart > preEnd || inStart > inEnd) {
 			return NULL;
 		}
 
@@ -76,10 +70,8 @@ public:
 		TreeNode *root = new TreeNode(rootValue);
 
 		int k = 0;
-		for(int i = inStart; i <= inEnd; ++i)
-		{
-			if(inorder[i] == rootValue)
-			{
+		for(int i = inStart; i <= inEnd; ++i) {
+			if(inorder[i] == rootValue) {
 				k = i;
 				break;
 			}

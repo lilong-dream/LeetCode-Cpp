@@ -9,31 +9,23 @@ using namespace std;
 class Solution {
 public:
     double pow(double x, int n) {
-        if(n < 0)
-        {
+        if(n < 0) {
             return 1.0 / helper(x, -n);
-        }
-        else
-        {
+        } else {
             return helper(x, n);
         }
     }
     
-    double helper(double x, int n)
-    {
-        if(n == 0)
-        {
+    double helper(double x, int n) {
+        if(n == 0) {
             return 1;
         }
         
         double res = pow(x, n / 2);
         
-        if(n & 0x01)
-        {
+        if(n & 0x01) {
             return res * res * x;
-        }
-        else
-        {
+        } else {
             return res * res;
         }
     }

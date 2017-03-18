@@ -15,6 +15,9 @@
 // isMatch("ab", ".*") → true
 // isMatch("aab", "c*a*b") → true
 
+// Hard
+// TODO
+
 class Solution {
 public:
     bool isMatch(string s, string p) {

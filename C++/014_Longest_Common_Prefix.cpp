@@ -11,19 +11,17 @@ using namespace std;
 class Solution {
 public:
     string longestCommonPrefix(vector<string> &strs) {
-    	if(strs.empty())
-    	{
+    	if(strs.empty()) {
     		return "";
     	}
 
-    	for(int i = 0; i < strs[0].size(); ++i)
-    		for(int j = 1; j < strs.size(); ++j)
-    		{
-    			if(strs[j].size() <= i || strs[j][i] != strs[0][i])  //
-    			{
+    	for(int i = 0; i < strs[0].size(); ++i) {
+    		for(int j = 1; j < strs.size(); ++j) {
+    			if(strs[j].size() <= i || strs[j][i] != strs[0][i]) {  //
     				return strs[0].substr(0, i);  // return not len
     			}
     		}
+		}
 
     	return strs[0];
     }

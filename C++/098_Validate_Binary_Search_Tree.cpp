@@ -18,10 +18,8 @@ public:
     	return isValidBST(root, INT_MIN, INT_MAX);
     }
 
-    bool isValidBST(TreeNode *root, int min, int max)
-    {
-    	if(root == NULL)
-    	{
+    bool isValidBST(TreeNode *root, int min, int max) {
+    	if(root == NULL) {
     		return true;
     	}
 

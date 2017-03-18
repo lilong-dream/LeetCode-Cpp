@@ -21,10 +21,8 @@ public:
     }
 
 	TreeNode *buildTree(vector<int> &inorder, int inStart, int inEnd,
-						vector<int> &postorder, int postStart, int postEnd) 
-	{
-		if(inStart > inEnd || postStart > postEnd)
-		{
+						vector<int> &postorder, int postStart, int postEnd) {
+		if(inStart > inEnd || postStart > postEnd) {
 			return NULL;
 		}
 
@@ -32,10 +30,8 @@ public:
 		TreeNode *root = new TreeNode(rootValue);
 
 		int k = 0;
-		for(int i = inStart; i <= inEnd; ++i)
-		{
-			if(inorder[i] == rootValue)
-			{
+		for(int i = inStart; i <= inEnd; ++i) {
+			if(inorder[i] == rootValue) {
 				k = i;
 				break;
 			}

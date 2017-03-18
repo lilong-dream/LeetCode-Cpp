@@ -1,4 +1,6 @@
 
+// TODO
+
 class Solution {
 public:
     int singleNumber(int A[], int n) {
@@ -40,15 +42,20 @@ class Solution {
 public:
     int singleNumber(int A[], int n) {
         int res = 0;
+
 		for (int i = 0; i < 32; ++i) {
 			int c = 0, d = 1 << i;
-			for (int j = 0; j < n; ++j)
-				if ((A[j] & d) != 0)
+			for (int j = 0; j < n; ++j) {
+				if ((A[j] & d) != 0) {
 					c++;
+				}
+			}
 
-			if ((c % 3) != 0)
+			if ((c % 3) != 0) {
 				res |= d;
+			}
 		}
+
 		return res;
     }
 };

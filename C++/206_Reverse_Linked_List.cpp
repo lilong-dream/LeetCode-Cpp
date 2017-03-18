@@ -1,4 +1,7 @@
 
+// TODO
+// Linked List
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -16,7 +19,7 @@ public:
         }
         ListNode *pre = head;
         ListNode *p = head->next;
-        pre->next = NULL;
+        head->next = NULL;
         while(p != NULL) {
             ListNode *nxt = p->next;
             p->next = pre;

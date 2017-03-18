@@ -1,5 +1,7 @@
 // https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/
 
+// Hard
+
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -13,8 +15,7 @@
 class Solution {
 public:
     int maxPathSum(TreeNode *root) {
-        if(root == NULL)
-        {
+        if(root == NULL) {
             return 0;
         }
         
@@ -25,23 +26,18 @@ public:
         return max;
     }
     
-    int maxSum(TreeNode *node, int &max)
-    {
+    int maxSum(TreeNode *node, int &max) {
         int left = 0, right = 0;
-        if(node->left != NULL)
-        {
+        if(node->left != NULL) {
             left = maxSum(node->left, max);
         }
-        if(node->right != NULL)
-        {
+        if(node->right != NULL) {
             right = maxSum(node->right, max);
         }
-        if(left < 0)
-        {
+        if(left < 0) {
             left = 0;
         }
-        if(right < 0)
-        {
+        if(right < 0) {
             right = 0;
         }
         
@@ -60,20 +56,16 @@ public:
         return maxSum;
     }
     
-    int helper(TreeNode *root, int &crossSum)
-    {
-        if(root == NULL)
-        {
+    int helper(TreeNode *root, int &crossSum) {
+        if(root == NULL) {
             return 0;
         }
         int left = helper(root->left, crossSum);
         int right = helper(root->right, crossSum);
-        if(left < 0)
-        {
+        if(left < 0) {
             left = 0;
         }
-        if(right < 0)
-        {
+        if(right < 0) {
             right = 0;
         }
         crossSum = std::max(crossSum, left + root->val + right);

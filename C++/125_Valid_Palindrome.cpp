@@ -3,27 +3,22 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        if(s.empty())
-        {
+        if(s.empty()) {
             return true;
         }
         
         int i = 0;
         int j = s.size() - 1;
         
-        while(i < j)
-        {
-            while(i < j && !helper(s[i]))
-            {
+        while(i < j) {
+            while(i < j && !helper(s[i])) {
                 ++i;
             }
-            while(i < j && !helper(s[j]))
-            {
+            while(i < j && !helper(s[j])) {
                 --j;
             }
             
-            if(i < j && s[i] != s[j])  //
-            {
+            if(i < j && s[i] != s[j]) {  //
                 return false;
             }
             

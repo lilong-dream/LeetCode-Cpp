@@ -11,14 +11,12 @@
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
-        if(head == NULL)
-		{
+        if(head == NULL) {
 			return NULL;
 		}
 		
 		RandomListNode *cur = head;
-		while(cur != NULL)
-		{
+		while(cur != NULL) {
 			RandomListNode *cpy = new RandomListNode(cur->label);
 			cpy->next = cur->next;
 			cur->next = cpy;
@@ -26,10 +24,8 @@ public:
 		}
 		
 		cur = head;
-		while(cur != NULL)
-		{
-			if(cur->random != NULL)
-			{
+		while(cur != NULL) {
+			if(cur->random != NULL) {
 				cur->next->random = cur->random->next;
 			}
 			cur = cur->next->next;
@@ -37,12 +33,10 @@ public:
 		
 		cur = head;
 		RandomListNode *newHead = head->next;
-		while(cur != NULL)
-		{
+		while(cur != NULL) {
 			RandomListNode *cpyNext = cur->next;
 			cur->next = cpyNext->next;
-			if(cpyNext->next != NULL)
-			{
+			if(cpyNext->next != NULL) {
 				cpyNext->next = cpyNext->next->next;
 			}
 			cur = cur->next;

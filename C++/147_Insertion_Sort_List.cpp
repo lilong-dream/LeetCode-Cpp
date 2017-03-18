@@ -11,18 +11,15 @@
 class Solution {
 public:
     ListNode *insertionSortList(ListNode *head) {
-        if(head == NULL || head->next == NULL)
-        {
+        if(head == NULL || head->next == NULL) {
             return head;
         }
         ListNode dummy(INT_MIN);
         
-        while(head)
-        {
+        while(head) {
             ListNode *node = &dummy;
             ListNode *pre = node;
-            while(node && node->val <= head->val) // !
-            {
+            while(node && node->val <= head->val) {  // !
                 pre = node;
                 node = node->next;
             }

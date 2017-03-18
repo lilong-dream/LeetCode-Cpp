@@ -2,13 +2,12 @@
 class Solution {
 public:
     vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-        std::sort(candidates.begin(), candidates.end());
+        std::sort(candidates.begin(), candidates.end());  // 剪枝
 		
 		vector<vector<int> > res;
 		vector<int> sol;
 		
-		if(candidates.empty())
-		{
+		if(candidates.empty()) {
 			return res;
 		}
 		
@@ -16,18 +15,14 @@ public:
 		return res;
     }
 	
-	void helper(vector<int> &candidates, int target, int start, vector<int> &sol, vector<vector<int> > &res)
-	{
-		if(target == 0)
-		{
+	void helper(vector<int> &candidates, int target, int start, vector<int> &sol, vector<vector<int> > &res) {
+		if(target == 0) {
 			res.push_back(sol);
 			return;
 		}
 		
-		for(int i = start; i < candidates.size(); ++i)
-		{
-			if(target < candidates[i])
-			{
+		for(int i = start; i < candidates.size(); ++i) {
+			if(target < candidates[i]) {
 				return;
 			}
 			

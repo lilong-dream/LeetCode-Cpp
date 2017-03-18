@@ -17,19 +17,17 @@ public:
     	return res;
     }
 
-    void generate(int left, int right, string str, vector<string>& res)
-    {
-    	if(left == 0 && right == 0)
-    	{
+    void generate(int left, int right, string str, vector<string>& res) {
+    	if(left == 0 && right == 0) {
     		res.push_back(str);
     		return;
     	}
-    	if(left > 0)
-    	{
+
+    	if(left > 0) {
     		generate(left - 1, right, str + '(', res);
     	}
-    	if(right > left)
-    	{
+
+    	if(right > left) {
     		generate(left, right - 1, str + ')', res);
     	}
     }
@@ -56,18 +54,16 @@ public:
         return res;
     }
     
-    void helper(int n, int left, int right, string cur, vector<string> &res)
-    {
-        if(left == n)
-        {
+    void helper(int n, int left, int right, string cur, vector<string> &res) {
+        if(left == n) {
             cur.append(n - right, ')');
             res.push_back(cur);
             return;
         }
         
         helper(n, left + 1, right, cur + '(', res);
-        if(left > right)
-        {
+
+        if(left > right) {
             helper(n, left, right + 1, cur + ')', res);
         }
     }

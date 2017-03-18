@@ -14,13 +14,11 @@ struct TreeNode {
 class Solution {
 public:
     bool hasPathSum(TreeNode *root, int sum) {
-    	if(root == NULL)
-    	{
+    	if(root == NULL) {
     		return false;
     	}
 
-    	if(root->left == NULL && root->right == NULL)
-    	{
+    	if(root->left == NULL && root->right == NULL) {
     		return sum == root->val;
     	}
 
@@ -56,8 +54,7 @@ int main()
 class Solution {
 public:
     bool hasPathSum(TreeNode *root, int sum) {
-        if(root == NULL)
-        {
+        if(root == NULL) {
             return false;    
         }
         
@@ -66,26 +63,22 @@ public:
         std::queue<int> values;
         values.push(root->val);
         
-        while(!nodes.empty())
-        {
+        while(!nodes.empty()) {
             TreeNode *node = nodes.front();
             nodes.pop();
             int value = values.front();
             values.pop();
             
-            if(node->left == NULL && node->right == NULL && value == sum)
-            {
+            if(node->left == NULL && node->right == NULL && value == sum) {
                 return true;
             }
             
-            if(node->left != NULL)
-            {
+            if(node->left != NULL) {
                 nodes.push(node->left);
                 values.push(value + node->left->val);
             }
             
-            if(node->right != NULL)
-            {
+            if(node->right != NULL) {
                 nodes.push(node->right);
                 values.push(value + node->right->val);
             }

@@ -37,7 +37,7 @@ public:
 		for (ListNode *prev = head, *cur = head->next; cur; cur = cur->next) {
 			if (prev->val == cur->val) {
 				prev->next = cur->next;
-				delete cur;
+				delete cur;  //
 			} else {
 				prev = cur;
 			}

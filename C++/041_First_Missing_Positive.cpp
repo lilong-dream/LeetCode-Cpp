@@ -1,5 +1,7 @@
 // https://oj.leetcode.com/problems/first-missing-positive/
 
+// Hard
+
 class Solution {
 public:
     int firstMissingPositive(int A[], int n) {

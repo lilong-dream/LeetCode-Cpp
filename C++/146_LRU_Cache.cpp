@@ -1,6 +1,8 @@
 
-struct Item
-{
+// TODO
+// Hard
+
+struct Item {
   int key;
   int value;
   Item(int k, int val) : key(k), value(val) { }
@@ -13,8 +15,7 @@ public:
     }
     
     int get(int key) {
-        if(cacheMap.find(key) != cacheMap.end())
-        {
+        if(cacheMap.find(key) != cacheMap.end()) {
             moveToHead(key);
             return cacheMap[key]->value;
         }
@@ -22,15 +23,11 @@ public:
     }
     
     void set(int key, int value) {
-        if(cacheMap.find(key) != cacheMap.end())
-        {
+        if(cacheMap.find(key) != cacheMap.end()) {
             cacheMap[key]->value = value;
             moveToHead(key);
-        }
-        else
-        {
-            if(cacheList.size() == m_capacity)
-            {
+        } else {
+            if(cacheList.size() == m_capacity) {
                 cacheMap.erase(cacheList.back().key);
                 cacheList.pop_back();
             }
@@ -40,8 +37,7 @@ public:
         }
     }
     
-    void moveToHead(int key)
-    {
+    void moveToHead(int key) {
         Item updateItem = *cacheMap[key];
         cacheList.erase(cacheMap[key]);
         cacheList.push_front(updateItem);
@@ -56,8 +52,7 @@ private:
 
 class LRUCache {
 public:
-    struct CacheItem
-	{
+    struct CacheItem {
 		int key;
 		int value;
 		CacheItem(int k, int v) : key(k), value(v) {}
@@ -68,8 +63,7 @@ public:
     }
 
     int get(int key) {
-    	if(m_map.find(key) == m_map.end())
-    	{
+    	if(m_map.find(key) == m_map.end()) {
     		return -1;
     	}
 
@@ -78,16 +72,12 @@ public:
     }
 
     void set(int key, int value) {
-    	if(m_map.find(key) != m_map.end())
-    	{
+    	if(m_map.find(key) != m_map.end()) {
     		m_map[key]->value = value;
     		MoveToHead(key);
-    	}
-    	else
-    	{
+    	} else {
     		CacheItem newItem(key, value);
-    		if(m_cache.size() == m_capacity)
-    		{
+    		if(m_cache.size() == m_capacity) {
     			m_map.erase(m_cache.back().key);
     			m_cache.pop_back();
     		}
@@ -102,8 +92,7 @@ private:
     list<CacheItem> m_cache;
     int m_capacity;
 
-    void MoveToHead(int key)
-    {
+    void MoveToHead(int key) {
     	CacheItem updateItem = *m_map[key];
     	m_cache.erase(m_map[key]);
     	m_cache.push_front(updateItem);

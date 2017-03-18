@@ -1,8 +1,9 @@
 
+// Hard
+
 class Solution {
 public:
     void solveSudoku(vector<vector<char> > &board) {
-        
 		dfs(board, 0, 0);
 	}
 

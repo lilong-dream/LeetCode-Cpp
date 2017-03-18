@@ -44,10 +44,15 @@ public:
 			return NULL;
 			
 		int mid = start + (end - start) / 2;
+
 		TreeNode *left = listToBST(start, mid - 1);
+
 		TreeNode *parent = new TreeNode(node->val);
+
 		parent->left = left;
-		node = node->next;
+
+		node = node->next;  //
+
 		parent->right = listToBST(mid + 1, end);
 		
 		return parent;

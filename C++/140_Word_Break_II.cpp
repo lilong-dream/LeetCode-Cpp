@@ -1,12 +1,13 @@
 // https://oj.leetcode.com/problems/word-break-ii/
 
+// Hard
+
 class Solution {
 public:
     vector<string> wordBreak(string s, unordered_set<string> &dict) {
         vector<string> res;
 		
-		if(s.empty())
-		{
+		if(s.empty()) {
 			return res;
 		}
 			
@@ -14,20 +15,16 @@ public:
 		vector<bool> f(len + 1, false);
 		f[0] = true;
 		
-		for(int i = 1; i <= len; ++i)
-		{
-			for(int j = 0; j < i; ++j)
-			{
-				if(f[j] && dict.find(s.substr(j, i - j)) != dict.end()) 
-				{
+		for(int i = 1; i <= len; ++i) {
+			for(int j = 0; j < i; ++j) {
+				if(f[j] && dict.find(s.substr(j, i - j)) != dict.end()) {
 					f[i] = true;
 					break;
 				}
 			}
 		}
 		
-		if(!f[len])
-		{
+		if(!f[len]) {
 			return res;
 		}
 		
@@ -36,19 +33,15 @@ public:
 		return res;
     }
 	
-	void dfs(const string &s, int start, unordered_set<string> &dict, const string &curWord, vector<string> &res)
-	{
-		if(start == s.length())
-		{
+	void dfs(const string &s, int start, unordered_set<string> &dict, const string &curWord, vector<string> &res) {
+		if(start == s.length()) {
 			res.push_back(curWord);
 			return;
 		}
 		
-		for(int i = start + 1; i <= s.length(); ++i)
-		{
+		for(int i = start + 1; i <= s.length(); ++i) {
 			string word = s.substr(start, i - start); 
-			if(dict.find(word) != dict.end())
-			{
+			if(dict.find(word) != dict.end()) {
 				string newWord = curWord.empty() ? word : curWord + " " + word;
 				dfs(s, i, dict, newWord, res);
 			}

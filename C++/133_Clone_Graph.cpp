@@ -11,8 +11,9 @@
 class Solution {
 public:
     UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
-        if(node == NULL)
+        if(node == NULL) {
 			return NULL;
+		}
 		
 		std::queue<UndirectedGraphNode*> q;
 		map<UndirectedGraphNode*, UndirectedGraphNode*> m;
@@ -22,19 +23,14 @@ public:
 		q.push(node);
 		m[node] = newNode;
 		
-		while(!q.empty())
-		{
+		while(!q.empty()) {
 			UndirectedGraphNode* cur = q.front();
 			q.pop();
 			
-			for(UndirectedGraphNode* neighbor : cur->neighbors)
-			{
-				if(m.find(neighbor) != m.end())
-				{
+			for(UndirectedGraphNode* neighbor : cur->neighbors) {
+				if(m.find(neighbor) != m.end()) {
 					m[cur]->neighbors.push_back(m[neighbor]);
-				}
-				else
-				{
+				} else {
 					UndirectedGraphNode* cpy = new UndirectedGraphNode(neighbor->label);
 					m[cur]->neighbors.push_back(cpy);
 					q.push(neighbor);

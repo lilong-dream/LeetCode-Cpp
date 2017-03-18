@@ -15,8 +15,7 @@ public:
     vector<int> inorderTraversal(TreeNode *root) {
         vector<int> res;
         
-        if(root == NULL)
-        {
+        if(root == NULL) {
             return res;
         }
         
@@ -37,15 +36,11 @@ public:
         
         TreeNode *p = root;
         
-        while(!s.empty() || p != NULL)
-        {
-            if(p != NULL)
-            {
+        while(!s.empty() || p != NULL) {
+            if(p != NULL) {
                 s.push(p);
                 p = p->left;
-            }
-            else
-            {
+            } else {
                 p = s.top();
                 s.pop();
                 res.push_back(p->val);
@@ -67,8 +62,7 @@ public:
 		return res;
     }
 
-	void helper(TreeNode *root, vector<int> &res)
-	{
+	void helper(TreeNode *root, vector<int> &res) {
 		if(root == NULL)
 		{
 			return;

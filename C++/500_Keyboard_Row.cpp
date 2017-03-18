@@ -2,7 +2,7 @@
 class Solution {
 public:
     vector<string> findWords(vector<string>& words) {
-                vector<string> res;
+        vector<string> res;
         
         map<char, int> m;
         for(char ch : "qwertyuiop") {

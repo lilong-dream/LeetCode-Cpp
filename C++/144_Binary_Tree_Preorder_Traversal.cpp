@@ -15,8 +15,7 @@ public:
     vector<int> preorderTraversal(TreeNode *root) {
         vector<int> res;
         
-        if(root == NULL)
-        {
+        if(root == NULL) {
             return res;
         }
         
@@ -34,28 +33,24 @@ public:
     vector<int> preorderTraversalIter(TreeNode *root) {
         vector<int> res;
         
-        if(root == NULL)
-        {
+        if(root == NULL) {
             return res;
         }
         
         std::stack<TreeNode*> st;
         st.push(root);
         
-        while(!st.empty())
-        {
+        while(!st.empty()) {
             TreeNode *node = st.top();
             st.pop();
             
             res.push_back(node->val);
             
-            if(node->right != NULL)  // not root!!
-            {
+            if(node->right != NULL) {  // not root!!
                 st.push(node->right);
             }
             
-            if(node->left != NULL)
-            {
+            if(node->left != NULL) {
                 st.push(node->left);
             }
         }

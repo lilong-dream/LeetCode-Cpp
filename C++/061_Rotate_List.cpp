@@ -11,8 +11,7 @@
 class Solution {
 public:
     ListNode *rotateRight(ListNode *head, int k) {
-        if(head == NULL || k == 0)
-    	{
+        if(head == NULL || k == 0) {
     		return head;
     	}
 
@@ -27,8 +26,7 @@ public:
 
     	int m = k % length;
 
-    	for(int i = 0; i < length - m; ++i)
-    	{
+    	for(int i = 0; i < length - m; ++i) {
     		node = node->next;
     	}
 

@@ -11,22 +11,20 @@
 class Solution {
 public:
     void connect(TreeLinkNode *root) {
-        if(root == NULL)
-		{
+        if(root == NULL) {
 			return;
 		}
-		std::queue<TreeLinkNode *> q;
+
+		std::queue<TreeLinkNode*> q;
 		q.push(root);
 		q.push(NULL);
-		while(!q.empty())
-		{
+
+		while(!q.empty()) {
 			TreeLinkNode * node = q.front();
 			q.pop();
 			
-			if(node == NULL)
-			{
-				if(!q.empty())
-				{
+			if(node == NULL) {
+				if(!q.empty()) {
 					q.push(NULL);
 				}
 				continue;
@@ -34,12 +32,10 @@ public:
 
 			node->next = q.front();
 
-			if(node->left)
-			{
+			if(node->left) {
 				q.push(node->left);
 			}
-			if(node->right)
-			{
+			if(node->right) {
 				q.push(node->right);
 			}
 		}

@@ -14,8 +14,7 @@ public:
             res += '-';
         }
         
-        //uint num = abs(numerator);  // not ok
-        //uint denom = abs(denominator);
+        //uint num = abs(numerator);  // abs not ok
         long num = numerator < 0 ? (long)numerator * (-1) : (long)numerator;  //
         long denom = denominator < 0 ? (long)denominator * (-1) : (long)denominator;
         

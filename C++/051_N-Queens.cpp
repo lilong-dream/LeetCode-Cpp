@@ -1,5 +1,7 @@
 // https://oj.leetcode.com/problems/n-queens/
 
+// Hard
+
 class Solution {
 public:
     vector<vector<string> > solveNQueens(int n) {
@@ -21,18 +23,14 @@ private:
     vector<bool> diag;
     vector<bool> antidiag;
     
-    void dfs(int i, int n, vector<vector<string> > &res, vector<string> &board)
-    {
-        if(i == n)
-        {
+    void dfs(int i, int n, vector<vector<string> > &res, vector<string> &board) {
+        if(i == n) {
             res.push_back(board);
             return;
         }
         
-        for(int j = 0; j < n; ++j)
-        {
-            if(!(col[j] && diag[i - j + n - 1] && antidiag[i + j]))
-            {
+        for(int j = 0; j < n; ++j) {
+            if(!(col[j] && diag[i - j + n - 1] && antidiag[i + j])) {
                 continue;        
             }
             

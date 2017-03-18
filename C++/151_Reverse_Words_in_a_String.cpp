@@ -53,6 +53,43 @@ public:
 class Solution {
 public:
     void reverseWords(string &s) {
+        int i = 0;
+        int j = 0;
+        int cnt = 0;
+        while(i < s.size()) {
+            while(i < s.size() && s[i] == ' ') {
+                i++;
+            }
+            if(i == s.size()) {
+                break;
+            }
+            if(cnt) {
+                s[j++] = ' ';
+            }
+            int start = j;
+            while(i < s.size() && s[i] != ' ') {
+                s[j++] = s[i++];
+            }
+            reverse(s, start, j - 1);
+            cnt++;
+        }
+        s.resize(j);
+        reverse(s, 0, j - 1);
+    }
+
+    void reverse(string &s, int left, int right) {
+        while(left < right)
+        {
+            char ch = s[left];
+            s[left++] = s[right];
+            s[right--] = ch;
+        }
+    }
+};
+
+class Solution {
+public:
+    void reverseWords(string &s) {
         string str = s;
 		reverse(str);
 		s = "";
@@ -64,8 +101,9 @@ public:
 		int i = start;
 		while(i < str.length())
 		{
-			while(i < str.length() && str[i] != ' ')
+			while(i < str.length() && str[i] != ' ') {
 				++i;
+			}
 			string word = str.substr(start, i - start);
 			reverse(word);
 			if(s.empty())
@@ -76,10 +114,10 @@ public:
 			{
 				s = s + " " + word;
 			}
-			while(i < str.length() && str[i] == ' ')
+			while(i < str.length() && str[i] == ' ') {
 				++i;
+			}
 			start = i;
-			i = start;
 		}
 	}
 
@@ -143,7 +181,6 @@ public:
 
 		s = res;
     }
-
 };
 
 class Solution {

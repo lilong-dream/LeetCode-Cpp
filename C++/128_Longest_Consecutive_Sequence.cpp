@@ -1,5 +1,7 @@
 // https://oj.leetcode.com/problems/longest-consecutive-sequence/
 
+// Hard
+
 class Solution {
 public:
     int longestConsecutive(vector<int> &num) {

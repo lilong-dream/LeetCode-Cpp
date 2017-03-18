@@ -7,20 +7,15 @@ public:
         int j = n - 1;
         int k = m + n - 1;
         
-        while(i >= 0 && j >= 0)
-        {
-            if(A[i] > B[j])
-            {
+        while(i >= 0 && j >= 0) {
+            if(A[i] > B[j]) {
                 A[k--] = A[i--];
-            }
-            else
-            {
+            } else {
                 A[k--] = B[j--];
             }
         }
         
-        while(j >= 0)
-        {
+        while(j >= 0) {
             A[k--] = B[j--];
         }
     }

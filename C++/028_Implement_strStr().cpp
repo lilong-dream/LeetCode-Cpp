@@ -2,6 +2,8 @@
 // Analysis: http://blog.csdn.net/lilong_dream/article/details/23655843
 // 1988lilong@163.com
 
+// TODO
+
 #include <iostream>
 #include <string>
 
@@ -11,30 +13,25 @@ public:
     	std::string str(haystack);
     	std::string target(needle);
 
-    	if(target.empty())
-    	{
+    	if(target.empty()) {
     		return haystack;
     	}
 
     	int len1 = str.length();
     	int len2 = target.length();
-    	if(len1 < len2)
-    	{
+    	if(len1 < len2) {
     		return NULL;
     	}
 
-    	for(int i = 0; i <= len1 - len2; ++i)
-    	{
+    	for(int i = 0; i <= len1 - len2; ++i) {
     		int j = 0;
     		int k = i;
-    		while(j < len2 && target[j] == str[k])
-    		{
+    		while(j < len2 && target[j] == str[k]) {
     			k++;
     			j++;
     		}
 
-    		if(j == len2)
-    		{
+    		if(j == len2) {
     			return (char*)str.substr(i).c_str();  //
     		}
     	}
@@ -95,6 +92,65 @@ int main()
 }
 
 // KMP
+
+// http://wiki.jikexueyuan.com/project/kmp-algorithm/define.html
+
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int hlen = haystack.size();
+        int nlen = needle.size();
+        
+        if(nlen == 0) {
+            return 0;
+        }
+        if(hlen == 0) {
+            return -1;
+        }
+        
+        vector<int> pattern(nlen);
+        
+        GeneratePattern(needle, pattern);
+        
+        return Match(haystack, needle, pattern);
+    }
+    
+    void GeneratePattern(const string &str, vector<int> &pattern) {
+        int len = str.size();
+        pattern[0] = -1;
+        int j = 1;
+        int k = -1;
+        while(j < len) {
+            if(k == -1 || str[j - 1] == str[k]) {
+                k++;
+                pattern[j] = k;
+                j++;
+            } else {
+                k = pattern[k];
+            }
+        }
+    }
+    
+    int Match(const string &haystack, const string &needle, const vector<int> &pattern) {
+        int hlen = haystack.size();
+        int nlen = needle.size();
+        int j = 0;
+        int k = 0;  // not -1
+        while(j < hlen) {
+            if(k == -1 || haystack[j] == needle[k]) {
+                j++;
+                k++;
+                if(k == nlen) {
+                    return j - k; 
+                }
+            } else {
+                k = pattern[k];
+            }	
+        }
+        return -1;
+    }
+};
+
 class Solution {
 public:
     char *strStr(char *haystack, char *needle) {

@@ -11,30 +11,29 @@
 
 class Solution {
 public:
-    vector<TreeNode *> generateTrees(int n) {
+    vector<TreeNode*> generateTrees(int n) {
          return generateTrees(1, n);
     }
 	
-	vector<TreeNode *> generateTrees(int start, int end)
-	{
-		vector<TreeNode *> v;
-		if(start > end)
-		{
+	vector<TreeNode*> generateTrees(int start, int end) {
+		vector<TreeNode*> v;
+
+		if(start > end) {
 			v.push_back(NULL);
 			return v;
 		}
-		for(int i = start; i <= end; ++i)
-		{
-			vector<TreeNode *> lefts = generateTrees(start, i - 1);
-			vector<TreeNode *> rights = generateTrees(i + 1, end);
-			for(TreeNode *left : lefts)
-				for(TreeNode *right : rights)
-				{
+
+		for(int i = start; i <= end; ++i) {
+			vector<TreeNode*> lefts = generateTrees(start, i - 1);
+			vector<TreeNode*> rights = generateTrees(i + 1, end);
+			for(TreeNode *left : lefts) {
+				for(TreeNode *right : rights) {
 					TreeNode *node = new TreeNode(i);
 					node->left = left;
 					node->right = right;
 					v.push_back(node);
 				}
+			}
 		}
 		
 		return v;

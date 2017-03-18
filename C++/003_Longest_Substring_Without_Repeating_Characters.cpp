@@ -1,5 +1,7 @@
 // Given a string, find the length of the longest substring without repeating characters.
 
+// int [26] 记录出现的最后位置
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
